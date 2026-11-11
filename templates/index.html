@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>手写数字识别</title>
+  <style>
+    body { font-family: system-ui; max-width: 480px; margin: 60px auto; text-align: center; }
+    input, button { font-size: 16px; padding: 8px 16px; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>✍️ 手写数字识别</h1>
+  <p>上传一张单个数字的灰度图（黑底白字效果最好）</p>
+  <form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required><br>
+    <button type="submit">识别</button>
+  </form>
+</body>
+</html>

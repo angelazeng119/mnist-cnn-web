@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>识别结果</title>
+  <style>body { font-family: system-ui; max-width: 480px; margin: 60px auto; text-align: center; }</style>
+</head>
+<body>
+  {% if error %}
+    <p style="color:red">{{ error }}</p>
+  {% else %}
+    <h1>识别结果：{{ pred }}</h1>
+    <p>置信度：{{ confidence }}%</p>
+    <details><summary>查看各类概率</summary><pre>{{ probs }}</pre></details>
+  {% endif %}
+  <a href="/">← 重新上传</a>
+</body>
+</html>
